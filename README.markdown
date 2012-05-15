@@ -5,25 +5,30 @@
 
 ##Description
 
-This is an Arduino clone with handy connections for 8 physical inputs and 8 high(er) current outputs, a built-in [ULN2803](http://www.ti.com/lit/ds/symlink/uln2803a.pdf) darlington array, and selectable output voltage.  The project began as a way to add lights and stuff to my daughter's play kitchen, but turned into a more general-purpose board.
+This is an Arduino clone with handy connections for eight physical inputs and eight high(er) current outputs, a built-in [ULN2803](http://www.ti.com/lit/ds/symlink/uln2803a.pdf) darlington array, per-pin LEDs for easy programming, and selectable output voltage.  The project began as a way to add lights and stuff to my daughter's play kitchen, but turned into a more general-purpose board.
 
 Inputs and outputs have 2.0mm [JST right-angle locking connectors](http://media.digikey.com/pdf/Data%20Sheets/JST%20PDFs/PH%20Series.pdf).  There are also pads to wire in whatever you'd like.
 
+The files were created in the free edition of CadSoft Eagle.
+
 ##Inputs
-Four inputs are wired for switches (digital) and four have three pins to connect to a pot/knob (analog).  Of course you can use them all for something else entirely.   Each input has an LED that indicates the current state of that switch or knob.
+Four inputs are wired with two pins for switches.  They are "ON" when the signal pin is pulled LOW (connected to the ground pin.) Four inputs have three pins for analog input, like a knob.  This makes it easy to attach a pot to the ground and 5V pins, with the center (wiper) pin moving between 0 and 5V.  Of course you can use them all for something else entirely.  Each input has an LED that indicates the current state of that switch or knob.
 
 ##Outputs
-Devices connected to an output will see a voltage (either 5V or VIN) when the corresponding processor pin is set LOW. Each output can sink up to 500mA though the transistor, and I wouldn't sink more than 1500mA in total across all eight channels at any one time.  Six of the outputs are on PWM-capable channels.  Each output has an LED that indicates it's current state.
+Devices connected to an output will see a voltage (either 5V or VIN) when the corresponding processor pin is set HIGH.  Each output can sink up to 500mA though the transistor, and I wouldn't sink more than 1500mA in total across all eight channels at any one time.  Six of the outputs are on [PWM pins](http://arduino.cc/en/Reference/analogWrite).  Each output has an LED that indicates it's current state.
 
 ##Power
-9-24V DC into the barrel jack or directly onto the pads next to the barrel jack.  The Power LED will light when power is connected.
-Output voltage can be set in the center-right of the board.
-Set to 5V by wiring the VOUT pad to the 5V pad - this will cause all output power to come through the 7805 voltage regulator, and therefore limits your total current consumption to 1A.
+Supply 9-24V DC into the barrel jack or directly onto the pads next to the barrel jack.  The Power LED will light when power is connected.
+Output voltage can be selected with the three larger pads marked VIN, VOUT, and 5V in the center-right of the board.
+Wiring the VOUT pad to the 5V pad will cause all output power to come through the 7805 voltage regulator, and therefore limits your total current consumption to 1A.
 Wiring the VOUT pad to the VIN pad will set your outputs to VIN, bypassing the regulator and allowing you to drive higher voltage devices like relays and motors.  The board's internal circuitry will still use 5V, only the output is changed.
 
 ##Software
-The arduino sketch "basic-kitchen.ino" causes the outputs to reflect the inputs.  This could be a good starting point for your projects.
-The six FT232 pins in the center of the board will connect with a standard FTDI-style serial breakout board for programming via USB or such.
+The arduino sketch "basic-kitchen.ino" has constants defined for the I/O pins and simply makes the outputs to reflect the inputs.  This could be a good starting point for your projects.
+The six FT232 pins in the center of the board will connect with a standard FTDI-style serial breakout board for programming via USB, [like this one](http://www.sparkfun.com/products/9716).
+
+##Extras
+The Arduino firmware gives the ATMega328 a total of twenty I/O pins.  On this board, sixteen of those are used for the main I/O and two are used for the serial FT232 block.  The remaining two unused pins (2 and 4) are broken out to headers on the left side of the board.
 
 ----
 
