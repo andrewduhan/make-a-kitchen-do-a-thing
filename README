@@ -1,5 +1,7 @@
 == Make A Kitchen Do A Thing ==
 
+<img src="http://dl.dropbox.com/u/126001/circuits/kitchen-layout_and_board.jpg">
+
 === Description ===
 This is an Arduino clone with handy connections for 8 physical inputs and 8 high(er) current outputs, a built-in [http://www.ti.com/lit/ds/symlink/uln2803a.pdf ULN2803] darlington array, and selectable output voltage.  The project began as a way to add lights and stuff to my daughter's play kitchen, but turned into a more general-purpose board.
 
