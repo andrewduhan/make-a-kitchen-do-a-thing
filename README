@@ -1,11 +1,11 @@
 == Make A Kitchen Do A Thing ==
 
-<img src="http://dl.dropbox.com/u/126001/circuits/kitchen-layout_and_board.jpg">
+Preview: http://dl.dropbox.com/u/126001/circuits/kitchen-layout_and_board.jpg
 
 === Description ===
-This is an Arduino clone with handy connections for 8 physical inputs and 8 high(er) current outputs, a built-in [http://www.ti.com/lit/ds/symlink/uln2803a.pdf ULN2803] darlington array, and selectable output voltage.  The project began as a way to add lights and stuff to my daughter's play kitchen, but turned into a more general-purpose board.
+This is an Arduino clone with handy connections for 8 physical inputs and 8 high(er) current outputs, a built-in ULN2803 darlington array ( http://www.ti.com/lit/ds/symlink/uln2803a.pdf ), and selectable output voltage.  The project began as a way to add lights and stuff to my daughter's play kitchen, but turned into a more general-purpose board.
 
-Inputs and outputs have 2.0mm [http://media.digikey.com/pdf/Data%20Sheets/JST%20PDFs/PH%20Series.pdf JST right-angle locking connectors].  There are also pads to wire in whatever you'd like.
+Inputs and outputs have 2.0mm JST right-angle locking connectors ( http://media.digikey.com/pdf/Data%20Sheets/JST%20PDFs/PH%20Series.pdf ).  There are also pads to wire in whatever you'd like.
 
 === Inputs ===
 Four inputs are wired for switches (digital) and four have three pins to connect to a pot/knob (analog).  Of course you can use them all for something else entirely.   Each input has an LED that indicates the current state of that switch or knob.
