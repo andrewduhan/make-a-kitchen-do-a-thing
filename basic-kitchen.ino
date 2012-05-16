@@ -4,7 +4,6 @@
 //                           //
 // This should just turn on  //
 // outputs to match inputs.  //
-// Totally untested.         //
 ///////////////////////////////
 
 const int dIns[] = {12,13,14,15};
@@ -45,7 +44,7 @@ void checkInputs(){
 void setOutputs(){
   for (int i=0; i<4; i++){
     digitalWrite(dOuts[i], !dInStat[i]);
-    analogWrite(aOuts[i], aInStat[i]);
+    analogWrite(aOuts[i], aInStat[i]/4);
   }
 }
 
