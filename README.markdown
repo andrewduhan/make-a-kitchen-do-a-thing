@@ -30,7 +30,7 @@ The arduino sketch "basic-kitchen.ino" has constants defined for the I/O pins an
 The six FT232 pins in the center of the board will connect with a standard FTDI-style serial breakout board for programming via USB, [like this one](http://www.sparkfun.com/products/9716).
 
 ###Extras
-The Arduino firmware gives the ATMega328 a total of twenty I/O pins.  On this board, sixteen of those are used for the main I/O and two are used for the serial FT232 block.  The remaining two unused pins (2 and 4) are broken out to headers on the left side of the board.
+The Arduino firmware gives the ATMega328 a total of twenty I/O pins.  On this board, sixteen of those are used for the main I/O and two are used for the serial FT232 block.  The remaining two unused pins (digital 2 and 4) are broken out to pads on the left side of the board.
 
 ----
 
@@ -38,10 +38,12 @@ The Arduino firmware gives the ATMega328 a total of twenty I/O pins.  On this bo
 * Add the small parts first.
 * If you don't like the LEDs, you don't need to install them.   They're just to make programming easier.
 * I like to use a chip socket for the processor, but I suggest you solder the ULN2803 directly to the board so that it can thermally couple with the exposed copper beneath.  If you're going to sink a lot of current, maybe dab a bit of heatsink compound under there?
+* Large capacitors:  the NEGATIVE pin goes in the ROUND hole.  The positive can go in either square hole, depending on the size of the cap.
 
 ###rev 19 issues
 * Output connectors are wired with positive to the LEFT when you look at the board with outputs at the top.  This is actually backwards from what JST connectors usually do, so on pre-made connectors you will have BLACK = POSITIVE.  Whoops.
 * The resistor network values aren't marked on the board, whoops.  They are all 1k.
 * The voltage regulator section has markings for both 1000uf (solid line) and 100uf (dashed line) caps. If you're not going to pull a lot of current through the voltage regulator, you can use 100uf.  In BOTH cases, the NEGATIVE pin should go into the ROUND hole.  Whichever you choose, ignore the left over square pad.
 * I goofed the silkscreen orientation markings for the LEDS, whoops.  The NEGATIVE/ANODE side with the SHORT pin should go into the ROUND pad.  The POSITIVE/CATHODE side with the LONG pin should go into the SQUARE hole.
+Specifically: look at the board so you can read "Make a kitchen do a thing" and the outputs are at the top, inputs at the bottom.   All of the output LEDs should have their FLAT side to your LEFT.  The four input LEDs on the left (marked 12-15) should have their FLAT side to your RIGHT.  The other four input LEDS (marked A2-A5) should have their FLAT side to your LEFT.    
 * The holes for header pins (like the FT232 block) are really really tight with standard pins.  They'll fit, but you gotta work them gently/firmly back and forth.  Sorry about that.
