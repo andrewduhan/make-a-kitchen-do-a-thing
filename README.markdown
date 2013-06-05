@@ -1,5 +1,5 @@
 #Make A Kitchen Do A Thing
-
+![Schematic](https://github.com/andrewduhan/make-a-kitchen-do-a-thing/blob/master/schematic.png)
 ![Board layout and photo](http://dl.dropbox.com/u/126001/circuits/kitchen-layout_and_board.jpg)
 
 
@@ -17,7 +17,7 @@ The board makes heavy use of curved traces simply because I think they look neat
 Four inputs are wired with two pins for switches for [digital input](http://arduino.cc/en/Reference/digitalRead).  They are "ON" when the signal pin is pulled LOW (connected to the ground pin.) Four inputs have three pins for [analog input](http://arduino.cc/en/Reference/analogRead), like a knob.  This makes it easy to attach a pot to the ground and 5V pins, with the center (wiper) pin moving between 0 and 5V.  Of course you can use them all for something else entirely.  Each input has an LED that indicates the current state of that switch or knob.
 
 ###Outputs
-Devices connected to an output will see a voltage ( either 5V or VIN, *minus the drop across the transistor*: 1V to 1.5V depending on current) when the corresponding processor pin is set HIGH.  Each output can sink up to 500mA though the transistor, and I wouldn't sink more than 1500mA in total across all eight channels at any one time.  Six of the outputs are on [PWM pins](http://arduino.cc/en/Reference/analogWrite), the other two can only output [On/Off](http://arduino.cc/en/Reference/digitalWrite).  Each output has an LED that indicates it's current state.
+Devices connected to an output will see a voltage ( either 5V or VIN, **minus the drop across the transistor**: 1V to 1.5V depending on current) when the corresponding processor pin is set HIGH.  Each output can sink up to 500mA though the transistor, and I wouldn't sink more than 1500mA in total across all eight channels at any one time.  Six of the outputs are on [PWM pins](http://arduino.cc/en/Reference/analogWrite), the other two can only output [On/Off](http://arduino.cc/en/Reference/digitalWrite).  Each output has an LED that indicates it's current state.
 
 ###Power
 Supply 9-24V DC into the barrel jack or directly onto the pads next to the barrel jack.  The Power LED will light when power is connected.
@@ -39,9 +39,9 @@ The Arduino firmware gives the ATMega328 a total of twenty I/O pins.  On this bo
 * If you don't like the LEDs, you don't need to install them.   They're just to make programming easier.
 * I like to use a chip socket for the processor, but I suggest you solder the ULN2803 directly to the board so that it can thermally couple with the exposed copper beneath.  If you're going to sink a lot of current, maybe dab a bit of heatsink compound under there?
 
-###rev 19
+###rev 19 issues
 * Output connectors are wired with positive to the LEFT when you look at the board with outputs at the top.  This is actually backwards from what JST connectors usually do, so on pre-made connectors you will have BLACK = POSITIVE.  Whoops.
-* The resistor network values aren't marked on the board, whoops.  4 of them are 1k, and the one right next to the processor is 10k.
+* The resistor network values aren't marked on the board, whoops.  They are all 1k.
 * The voltage regulator section has markings for both 1000uf (solid line) and 100uf (dashed line) caps. If you're not going to pull a lot of current through the voltage regulator, you can use 100uf.  In BOTH cases, the NEGATIVE pin should go into the ROUND hole.  Whichever you choose, ignore the left over square pad.
 * I goofed the silkscreen orientation markings for the LEDS, whoops.  The NEGATIVE/ANODE side with the SHORT pin should go into the ROUND pad.  The POSITIVE/CATHODE side with the LONG pin should go into the SQUARE hole.
 * The holes for header pins (like the FT232 block) are really really tight with standard pins.  They'll fit, but you gotta work them gently/firmly back and forth.  Sorry about that.

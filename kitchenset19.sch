@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -11922,7 +11922,7 @@ Standard 7805 5V regulator. IGO (Input Ground Output). Spark Fun Electronics SKU
 <instance part="Y1" gate="G$1" x="68.58" y="83.82" rot="R90"/>
 <instance part="RESET_SW" gate="S" x="60.96" y="104.14" rot="MR0"/>
 <instance part="PWR_LED" gate="G$1" x="167.64" y="76.2" rot="MR270"/>
-<instance part="J1" gate="G$1" x="93.98" y="17.78" rot="R180"/>
+<instance part="J1" gate="G$1" x="93.98" y="7.62" rot="MR0"/>
 <instance part="GND1" gate="1" x="63.5" y="7.62"/>
 <instance part="P+1" gate="G$1" x="53.34" y="22.86"/>
 <instance part="P+2" gate="G$1" x="63.5" y="73.66"/>
@@ -12026,21 +12026,21 @@ Standard 7805 5V regulator. IGO (Input Ground Output). Spark Fun Electronics SKU
 <pinref part="IC2" gate="G$1" pin="GND"/>
 <wire x1="63.5" y1="12.7" x2="63.5" y2="10.16" width="0.1524" layer="91"/>
 <junction x="63.5" y="10.16"/>
-<pinref part="J1" gate="G$1" pin="PWR"/>
 <wire x1="53.34" y1="10.16" x2="63.5" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="10.16" x2="86.36" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="10.16" x2="73.66" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="10.16" x2="73.66" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="-"/>
 <junction x="73.66" y="10.16"/>
 <pinref part="C2" gate="G$1" pin="-"/>
-<pinref part="J1" gate="G$1" pin="GNDBREAK"/>
-<wire x1="91.44" y1="12.7" x2="91.44" y2="10.16" width="0.1524" layer="91"/>
-<junction x="91.44" y="10.16"/>
 <pinref part="JPSUPPLY" gate="G$1" pin="1"/>
 <wire x1="93.98" y1="22.86" x2="86.36" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="22.86" x2="86.36" y2="10.16" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="GND"/>
+<wire x1="91.44" y1="10.16" x2="86.36" y2="10.16" width="0.1524" layer="91"/>
 <junction x="86.36" y="10.16"/>
+<pinref part="J1" gate="G$1" pin="GNDBREAK"/>
+<wire x1="91.44" y1="12.7" x2="91.44" y2="10.16" width="0.1524" layer="91"/>
+<junction x="91.44" y="10.16"/>
 </segment>
 <segment>
 <pinref part="GND5" gate="1" pin="GND"/>
@@ -12835,12 +12835,12 @@ Standard 7805 5V regulator. IGO (Input Ground Output). Spark Fun Electronics SKU
 <wire x1="83.82" y1="20.32" x2="73.66" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="20.32" x2="73.66" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="+"/>
-<pinref part="J1" gate="G$1" pin="GND"/>
-<wire x1="91.44" y1="20.32" x2="91.44" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="JPSUPPLY" gate="G$1" pin="2"/>
 <wire x1="93.98" y1="25.4" x2="83.82" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="25.4" x2="83.82" y2="20.32" width="0.1524" layer="91"/>
 <junction x="83.82" y="20.32"/>
+<pinref part="J1" gate="G$1" pin="PWR"/>
+<wire x1="91.44" y1="20.32" x2="91.44" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P+8" gate="1" pin="VCC"/>
