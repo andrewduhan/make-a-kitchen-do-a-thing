@@ -1,5 +1,4 @@
 #Make A Kitchen Do A Thing
-![Schematic](https://github.com/andrewduhan/make-a-kitchen-do-a-thing/blob/master/schematic.png)
 ![Board layout and photo](http://dl.dropbox.com/u/126001/circuits/kitchen-layout_and_board.jpg)
 
 
